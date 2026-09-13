@@ -1,0 +1,286 @@
+/* .hackathon-card{
+    width:100%;
+    background:#fff;
+    border-radius:18px;
+    overflow:hidden;
+    box-shadow:0 12px 28px rgba(0,0,0,.08);
+    transition:.35s;
+    border:1px solid #edf1f5;
+}
+
+.hackathon-card:hover{
+    transform:translateY(-10px);
+    box-shadow:0 18px 45px rgba(0,0,0,.18);
+}
+
+.card-image{
+    position:relative;
+    height:170px;
+    overflow:hidden;
+    background:linear-gradient(135deg,#0f172a,#312e81);
+}
+.card-image img{
+    width:100%;
+    height:100%;
+    object-fit:cover;
+    opacity:.35;
+    transition:.4s;
+}
+
+.hackathon-card:hover img{
+    transform:scale(1.08);
+}
+
+.card-overlay{
+    position:absolute;
+    inset:0;
+    padding:16px;
+    display:flex;
+    flex-direction:column;
+    justify-content:flex-end;
+    gap: 4px;
+}
+
+.card-overlay h2{
+    color:white;
+    font-size: clamp(15px, 1.4vw, 19px);
+    line-height:1.2;
+    font-weight:800;
+    letter-spacing:0.3px;
+    text-transform:uppercase;
+    max-width: 90%;
+}
+
+.card-overlay span{
+    color:#6ee7ff;
+    font-size:14px;
+    font-weight:600;
+}
+
+.card-footer div svg {
+  color: #00b4a2;
+  font-size: 16px;
+  flex-shrink: 0;
+  display: block;
+  position: relative;
+  top: -1px;
+}
+
+.status{
+    position:absolute;
+    top:14px;
+    right:14px;
+    padding:6px 12px;
+    border-radius:50px;
+    color:white;
+    font-size:11px;
+    font-weight:700;
+}
+
+.in-progress{
+    background:#16a34a;
+}
+
+.upcoming{
+    background:#2563eb;
+}
+
+.ongoing{
+    background:#0891b2;
+}
+
+.live{
+    background:#00b4a2;
+}
+
+.card-body{
+    padding:18px;
+}
+
+.card-body h3{
+    font-size:20px;
+    font-weight:700;
+    margin-bottom:10px;
+    color:#1e293b;
+}
+
+.card-body p{
+    font-size:14px;
+    color:#6b7280;
+    line-height:1.6;
+    min-height:45px;
+}
+
+.card-footer{
+    margin-top:18px;
+    display:flex;
+    flex-direction:column;
+    gap:10px;
+    color:#475569;
+    font-size:14px;
+}
+
+.card-footer div {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  line-height: 1;
+}
+
+@media (max-width: 500px) {
+  .card-image { height: 150px; }
+  .card-overlay h2 { font-size: 16px; }
+} */
+ .hackathon-card{
+    width:100%;
+    background:#fff;
+    border-radius:18px;
+    overflow:hidden;
+    box-shadow:0 12px 28px rgba(0,0,0,.08);
+    transition:.35s;
+    border:1px solid #edf1f5;
+}
+
+.hackathon-card:hover{
+    transform:translateY(-10px);
+    box-shadow:0 18px 45px rgba(0,0,0,.18);
+}
+
+.card-image{
+    position:relative;
+    height:170px;
+    overflow:hidden;
+    background:linear-gradient(135deg,#0f172a,#312e81);
+}
+.card-image img{
+    width:100%;
+    height:100%;
+    object-fit:cover;
+    opacity:.35;
+    transition:.4s;
+}
+
+.hackathon-card:hover img{
+    transform:scale(1.08);
+}
+
+.card-overlay{
+    position:absolute;
+    inset:0;
+    padding:16px;
+    display:flex;
+    flex-direction:column;
+    justify-content:flex-end;
+    gap: 4px;
+}
+
+.card-overlay h2{
+    color:white;
+    font-size: clamp(15px, 1.4vw, 19px);
+    line-height:1.2;
+    font-weight:800;
+    letter-spacing:0.3px;
+    text-transform:uppercase;
+    max-width: 90%;
+}
+
+.card-overlay span{
+    color:#6ee7ff;
+    font-size:14px;
+    font-weight:600;
+}
+
+.card-footer div svg {
+  color: #00b4a2;
+  font-size: 16px;
+  flex-shrink: 0;
+  display: block;
+  position: relative;
+  top: -1px;
+}
+
+.status{
+    position:absolute;
+    top:14px;
+    right:14px;
+    padding:6px 12px;
+    border-radius:50px;
+    color:white;
+    font-size:11px;
+    font-weight:700;
+}
+
+.in-progress{
+    background:#16a34a;
+}
+
+.upcoming{
+    background:#2563eb;
+}
+
+.ongoing{
+    background:#0891b2;
+}
+
+.live{
+    background:#00b4a2;
+}
+
+.card-body{
+    padding:18px;
+}
+
+.card-body h3{
+    font-size:20px;
+    font-weight:700;
+    margin-bottom:10px;
+    color:#1e293b;
+}
+
+.card-body p{
+    font-size:14px;
+    color:#6b7280;
+    line-height:1.6;
+    min-height:45px;
+}
+
+.card-footer{
+    margin-top:18px;
+    display:flex;
+    flex-direction:column;
+    gap:10px;
+    color:#475569;
+    font-size:14px;
+}
+
+.card-footer div {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  line-height: 1;
+}
+
+.hackathon-card .btn-apply {
+  width: 100%;
+  margin-top: 16px;
+  background-color: #00b4a2 !important;
+  background-image: none !important;
+  color: #ffffff !important;
+  border: none !important;
+  padding: 12px 0;
+  border-radius: 8px;
+  font-weight: 700;
+  font-size: 14px;
+  cursor: pointer;
+  transition: background-color 0.2s ease, transform 0.2s ease;
+}
+
+.hackathon-card .btn-apply:hover {
+  background-color: #00d2c4 !important;
+  transform: translateY(-1px);
+}
+
+@media (max-width: 500px) {
+  .card-image { height: 150px; }
+  .card-overlay h2 { font-size: 16px; }
+}

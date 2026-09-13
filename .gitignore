@@ -1,0 +1,55 @@
+# ==========================================
+# 1. Dependency Directories
+# ==========================================
+node_modules/
+jspm_packages/
+.pnpm-store/
+
+# ==========================================
+# 2. Environment Variables & Secrets (CRITICAL)
+# ==========================================
+.env
+.env.local
+.env.production
+.env.development
+*.env
+.env.*.local
+
+# ==========================================
+# 3. Docker & Infrastructure Persistent Data
+# ==========================================
+# Prevents syncing actual MongoDB data or Redis cache dumps to GitHub
+.docker_data/
+redis_data/
+mongo_data/
+dump.rdb
+appendonly.aof
+
+# ==========================================
+# 4. Nginx Security & SSL Certificates
+# ==========================================
+# Never push your real production SSL keys or certificate files
+nginx/certs/
+*.crt
+*.key
+*.pem
+
+# ==========================================
+# 5. Production Media Uploads & Logs
+# ==========================================
+# Prevents locally uploaded images/files from dirtying your repo
+backend/src/uploads/*
+!backend/src/uploads/.gitkeep
+logs/
+*.log
+npm-debug.log*
+
+# ==========================================
+# 6. Build Outputs & IDEs
+# ==========================================
+frontend/dist/
+backend/dist/
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/

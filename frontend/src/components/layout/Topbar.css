@@ -1,0 +1,151 @@
+.topbar {
+  height: 60px;          /* ← was 90px */
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 28px;       /* ← was 40px */
+  background: rgba(255, 255, 255, 0.85);
+  border-bottom: 1px solid #e8ecef;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  backdrop-filter: blur(6px);
+}
+
+.topbar-right {
+  display: flex;
+  align-items: center;
+  gap: 18px;
+  margin-left: auto;     /* always push icons to the right */
+}
+
+.topbar-icon {
+  font-size: 1rem;       /* ← was 1.2rem */
+  cursor: pointer;
+  flex-shrink: 0;
+}
+
+/* ── Hamburger button — hidden on desktop ── */
+.topbar-menu-btn {
+  display: none;
+  align-items: center;
+  justify-content: center;
+  background: none;
+  border: none;
+  color: #10285d;
+  font-size: 1.2rem;
+  cursor: pointer;
+  padding: 6px;
+  border-radius: 6px;
+  line-height: 1;
+}
+
+.topbar-menu-btn:hover {
+  background: rgba(0, 0, 0, 0.06);
+}
+
+.teal {
+  color: #11b7a8;
+}
+
+.divider {
+  width: 1px;
+  height: 24px;          /* ← was 30px */
+  background: #d9dee3;
+}
+
+.notification {
+  position: relative;
+}
+
+.notification span {
+  position: absolute;
+  top: -8px;
+  right: -8px;
+  width: 17px;           /* ← was 20px */
+  height: 17px;
+  border-radius: 50%;
+  background: #11b7a8;
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 10px;
+}
+
+.profile {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.avatar {
+  width: 36px;           /* ← was 50px */
+  height: 36px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, #18c3b1, #1595ff);
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 700;
+  font-size: 0.85rem;
+  flex-shrink: 0;
+}
+
+.profile h5 {
+  margin: 0;
+  font-size: 0.875rem;
+}
+
+.profile-text span {
+  color: #7b8396;
+  font-size: 0.75rem;
+}
+
+/* ══════════════════════════════
+   Tablet  (≤ 1024px)
+   Show hamburger, keep topbar
+══════════════════════════════ */
+@media (max-width: 1024px) {
+  .topbar {
+    padding: 0 20px;
+    height: 56px;
+  }
+
+  .topbar-menu-btn {
+    display: flex;        /* ← show hamburger on tablet/mobile */
+  }
+}
+
+/* ══════════════════════════════
+   Mobile  (≤ 768px)
+══════════════════════════════ */
+@media (max-width: 768px) {
+  .topbar {
+    padding: 0 14px;
+    height: 52px;
+  }
+
+  .topbar-right {
+    gap: 12px;
+  }
+
+  .topbar-hide-sm {
+    display: none;
+  }
+
+  .profile-text {
+    display: none;
+  }
+
+  .avatar {
+    width: 32px;
+    height: 32px;
+    font-size: 0.8rem;
+  }
+
+  .divider {
+    height: 20px;
+  }
+}

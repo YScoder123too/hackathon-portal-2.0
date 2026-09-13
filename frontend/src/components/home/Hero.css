@@ -1,0 +1,336 @@
+.hero-section {
+  background: radial-gradient(circle at 85% 50%, #0c2d48 0%, #051329 70%);
+  width: 100%;
+  padding: 60px 8% 140px 8%;
+  overflow: hidden;
+  position: relative;
+}
+
+.hero-inner {
+  max-width: 1600px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 60px;
+}
+
+.hero-content {
+  max-width: 550px;
+  width: 100%;
+}
+
+.hero-section .hero-title {
+  font-size: 3.5rem;
+  font-weight: 800;
+  color: #ffffff !important;
+  line-height: 1.15;
+  margin-bottom: 20px;
+}
+
+.hero-section .hero-title .accent-text {
+  color: #00b4a2 !important;
+}
+
+.hero-subtitle {
+  color: #94a3b8;
+  font-size: 1.1rem;
+  line-height: 1.6;
+  margin-bottom: 35px;
+}
+
+.hero-subtitle .highlight-text {
+  display: block;
+  color: #00b4a2;
+  margin-top: 10px;
+  font-weight: 500;
+}
+
+.hero-actions {
+  display: flex;
+  gap: 20px;
+  margin-bottom: 50px;
+}
+
+.btn-primary {
+  background-color: #00b4a2;
+  color: #051329;
+  border: none;
+  padding: 14px 28px;
+  border-radius: 8px;
+  font-weight: 600;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: transform 0.2s, background 0.3s;
+}
+
+.btn-primary:hover {
+  background-color: #00d2c4;
+  transform: translateY(-2px);
+}
+
+.btn-secondary {
+  background-color: #0f172a;
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  color: #ffffff;
+  padding: 14px 28px;
+  border-radius: 8px;
+  font-weight: 500;
+  font-size: 1rem;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.btn-secondary:hover {
+  background-color: #1e293b;
+}
+
+.play-icon {
+  font-size: 0.75rem;
+  color: #00b4a2;
+}
+
+.hero-features {
+  display: flex;
+  flex-wrap: nowrap;
+gap: 30px;
+}
+
+.feature-pill {
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+  color: #ffffff;
+}
+
+.pill-icon {
+  color: #00b4a2;
+  font-size: 1.2rem;
+  margin-top: 20px;
+}
+
+.feature-pill strong {
+  display: block;
+  font-size: 0.9rem;
+}
+
+.feature-pill p {
+  color: #64748b;
+  font-size: 0.8rem;
+  margin: 2px 0 0 0;
+}
+
+/* ── Graphic container ── */
+.hero-graphic-container {
+  position: relative;
+  width: clamp(280px, 32vw, 450px);
+  height: clamp(230px, 27vw, 350px);
+  flex-shrink: 0;
+}
+
+.abstract-card {
+  position: absolute;
+  border-radius: 12px;
+  background: linear-gradient(135deg, rgba(255,255,255,0.08) 0%, rgba(255,255,255,0.03) 100%);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(10px);
+}
+
+.main-card {
+  width: 84%;
+  height: 68%;
+  top: 11%;
+  right: 0;
+  box-shadow: 0 25px 50px -12px rgba(0,0,0,0.5);
+}
+
+.card-header-mock {
+  padding: 15px 18px;
+  color: #00b4a2;
+  font-weight: bold;
+  font-size: 1rem;
+  border-bottom: 1px solid rgba(255,255,255,0.06);
+}
+
+/* Fake code lines inside the main card */
+.card-body-mock {
+  padding: 18px 18px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.mock-line {
+  height: 10px;
+  border-radius: 6px;
+  background: rgba(255, 255, 255, 0.08);
+}
+
+.mock-line.accent {
+  background: rgba(0, 180, 162, 0.25);
+}
+
+.floating-card-left {
+  width: 100px;
+  height: 100px;
+  bottom: 10px;
+  left: 20px;
+  background: radial-gradient(circle, rgba(0,180,162,0.2) 0%, transparent 80%);
+}
+
+.floating-card-right {
+  width: 80px;
+  height: 80px;
+  top: 0;
+  right: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.5rem;
+}
+
+/* ── Wobble animations ── */
+@keyframes wobble-slow {
+  0%   { transform: translateY(0px) rotate(0deg); }
+  25%  { transform: translateY(-8px) rotate(0.5deg); }
+  75%  { transform: translateY(4px) rotate(-0.5deg); }
+  100% { transform: translateY(0px) rotate(0deg); }
+}
+
+@keyframes wobble-medium {
+  0%   { transform: translateY(0px) rotate(0deg); }
+  30%  { transform: translateY(-10px) rotate(-1deg); }
+  70%  { transform: translateY(5px) rotate(1deg); }
+  100% { transform: translateY(0px) rotate(0deg); }
+}
+
+@keyframes wobble-fast {
+  0%   { transform: translateY(0px) rotate(0deg); }
+  20%  { transform: translateY(-12px) rotate(2deg); }
+  60%  { transform: translateY(6px) rotate(-2deg); }
+  100% { transform: translateY(0px) rotate(0deg); }
+}
+
+.wobble-slow   { animation: wobble-slow   4s ease-in-out infinite; }
+.wobble-medium { animation: wobble-medium 3s ease-in-out infinite; animation-delay: 0.5s; }
+.wobble-fast   { animation: wobble-fast   2.5s ease-in-out infinite; animation-delay: 1s; }
+
+/* ══════════════════════════════════════
+   RESPONSIVE BREAKPOINTS
+   ══════════════════════════════════════ */
+
+@media (max-width: 850px) {
+  .hero-section {
+    padding: 50px 6% 80px 6%;
+    text-align: center;
+  }
+
+  .hero-inner {
+    flex-direction: column;
+  }
+
+  .hero-content {
+    max-width: 650px;
+  }
+
+  .hero-actions {
+    justify-content: center;
+  }
+
+  .hero-features {
+    justify-content: center;
+    text-align: left;
+  }
+
+  .hero-graphic-container {
+    margin-top: 20px;
+  }
+}
+
+@media (max-width: 768px) {
+  .hero-section {
+    padding: 40px 5% 60px 5%;
+  }
+
+  .hero-title {
+    font-size: 2.4rem;
+  }
+
+  .hero-subtitle {
+    font-size: 1rem;
+  }
+
+  .hero-actions {
+    flex-direction: column;
+    gap: 14px;
+    width: 100%;
+  }
+
+  .btn-primary,
+  .btn-secondary {
+    width: 100%;
+    justify-content: center;
+  }
+
+  .hero-features {
+    flex-direction: column;
+    align-items: center;
+    gap: 18px;
+  }
+
+  .feature-pill {
+    text-align: left;
+    max-width: 320px;
+  }
+
+  .hero-graphic-container {
+    width: 100%;
+    max-width: 380px;
+    height: 300px;
+  }
+
+  .main-card {
+    width: 100%;
+    height: 220px;
+    right: auto;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+
+  .floating-card-right {
+    right: 10px;
+  }
+
+  .floating-card-left {
+    left: 10px;
+  }
+}
+
+@media (max-width: 420px) {
+  .hero-title {
+    font-size: 1.9rem;
+  }
+
+  .hero-graphic-container {
+    height: 260px;
+  }
+
+  .main-card {
+    height: 190px;
+  }
+
+  .floating-card-left,
+  .floating-card-right {
+    display: none;
+  }
+}
+
+@media (max-width: 1024px) {
+  .hero-inner { flex-direction: column; text-align: center; }
+  .hero-content { max-width: 100%; }
+}
+@media (max-width: 600px) {
+  .hero-content h1 { font-size: 2rem; }
+}

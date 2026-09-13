@@ -1,0 +1,29 @@
+.featured-section {
+  padding: 60px 8%;
+}
+
+.section-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 30px;
+}
+
+.section-header h2 {
+  font-size: 1.75rem;
+  color: #0f172a;
+  font-weight: 700;
+}
+
+.view-all-link {
+  color: #00b4a2;
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 0.9rem;
+}
+
+.hackathons-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 25px;
+}

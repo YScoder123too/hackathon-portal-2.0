@@ -1,0 +1,320 @@
+.judge-page {
+  padding: 8px 4px 40px;
+}
+
+.page-heading {
+  font-size: 22px;
+  font-weight: 700;
+  color: #1a1a2e;
+  margin-bottom: 4px;
+}
+
+.page-sub {
+  color: #6b7280;
+  font-size: 14px;
+  margin-bottom: 24px;
+}
+
+/* ── Submissions list ── */
+.submissions-list {
+  background: #fff;
+  border-radius: 14px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+  overflow: hidden;
+}
+
+.submission-list-row {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  padding: 16px 20px;
+  border-bottom: 1px solid #f4f5f7;
+}
+
+.submission-list-row:last-child {
+  border-bottom: none;
+}
+
+.submission-list-avatar {
+  width: 42px;
+  height: 42px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, #2869d0, #1aa6a6);
+  flex-shrink: 0;
+}
+
+.submission-list-info {
+  flex-grow: 1;
+}
+
+.submission-list-team {
+  font-weight: 600;
+  color: #1a1a2e;
+  font-size: 14px;
+}
+
+.submission-list-hack {
+  font-size: 12px;
+  color: #6b7280;
+}
+
+.badge-pending {
+  background: #fef3c7;
+  color: #b45309;
+  font-size: 11px;
+  font-weight: 600;
+  padding: 4px 10px;
+  border-radius: 20px;
+}
+
+.badge-reviewed {
+  background: #dcfce7;
+  color: #15803d;
+  font-size: 11px;
+  font-weight: 600;
+  padding: 4px 10px;
+  border-radius: 20px;
+}
+
+.btn-review {
+  background: #2869d0;
+  color: #fff;
+  border: none;
+  padding: 8px 16px;
+  border-radius: 8px;
+  font-size: 13px;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.btn-review:hover {
+  background: #1e54ab;
+}
+
+/* ── Score Now ── */
+.score-layout {
+  display: grid;
+  grid-template-columns: 260px 1fr;
+  gap: 20px;
+}
+
+@media (max-width: 800px) {
+  .score-layout {
+    grid-template-columns: 1fr;
+  }
+}
+
+.team-select-panel {
+  background: #fff;
+  border-radius: 14px;
+  padding: 12px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+  height: fit-content;
+}
+
+.team-select-item {
+  padding: 12px 14px;
+  border-radius: 10px;
+  font-size: 13px;
+  font-weight: 600;
+  color: #374151;
+  cursor: pointer;
+  margin-bottom: 4px;
+}
+
+.team-select-item.active {
+  background: #eef4ff;
+  color: #2869d0;
+}
+
+.score-panel {
+  background: #fff;
+  border-radius: 14px;
+  padding: 24px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+}
+
+.score-criterion {
+  margin-bottom: 22px;
+}
+
+.score-criterion-label {
+  display: flex;
+  justify-content: space-between;
+  font-size: 13px;
+  font-weight: 600;
+  color: #1a1a2e;
+  margin-bottom: 8px;
+}
+
+.score-criterion-label span.value {
+  color: #2869d0;
+}
+
+.score-slider {
+  width: 100%;
+  accent-color: #2869d0;
+}
+
+.score-total {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 16px 0;
+  border-top: 1px solid #f4f5f7;
+  margin-top: 10px;
+  font-weight: 700;
+  color: #1a1a2e;
+}
+
+.score-total .total-value {
+  font-size: 22px;
+  color: #1aa6a6;
+}
+
+.feedback-textarea {
+  width: 100%;
+  min-height: 90px;
+  border: 1px solid #e5e7eb;
+  border-radius: 10px;
+  padding: 12px;
+  font-size: 13px;
+  font-family: inherit;
+  resize: vertical;
+  margin-bottom: 16px;
+}
+
+.btn-submit-score {
+  background: #1aa6a6;
+  color: #fff;
+  border: none;
+  padding: 12px 24px;
+  border-radius: 10px;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.btn-submit-score:hover {
+  background: #158f8f;
+}
+
+/* ── Leaderboard ── */
+.leaderboard-list {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.leaderboard-row {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  background: #fff;
+  border-radius: 12px;
+  padding: 14px 18px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+}
+
+.leaderboard-row.gold {
+  background: linear-gradient(135deg, #1a2c5a, #2869d0);
+  color: #fff;
+}
+
+.leaderboard-rank {
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  background: #f1f5f9;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 700;
+  font-size: 13px;
+  flex-shrink: 0;
+}
+
+.leaderboard-row.gold .leaderboard-rank {
+  background: rgba(255, 255, 255, 0.2);
+  color: #fff;
+}
+
+.leaderboard-team {
+  flex-grow: 1;
+}
+
+.leaderboard-team-name {
+  font-weight: 600;
+  font-size: 14px;
+}
+
+.leaderboard-team-hack {
+  font-size: 12px;
+  opacity: 0.7;
+}
+
+.leaderboard-score {
+  font-weight: 700;
+  font-size: 18px;
+}
+
+/* ── Schedule ── */
+.schedule-list {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+.schedule-row {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  background: #fff;
+  border-radius: 12px;
+  padding: 16px 18px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+  border-left: 4px solid #2869d0;
+}
+
+.schedule-time {
+  min-width: 90px;
+  font-weight: 700;
+  color: #1a1a2e;
+  font-size: 13px;
+}
+
+.schedule-info {
+  flex-grow: 1;
+}
+
+.schedule-title {
+  font-weight: 600;
+  color: #1a1a2e;
+  font-size: 14px;
+}
+
+.schedule-sub {
+  font-size: 12px;
+  color: #6b7280;
+}
+
+.schedule-tag {
+  font-size: 11px;
+  font-weight: 600;
+  padding: 4px 10px;
+  border-radius: 20px;
+}
+
+.tag-live {
+  background: #dcfce7;
+  color: #15803d;
+}
+
+.tag-deadline {
+  background: #fee2e2;
+  color: #b91c1c;
+}
+
+.tag-meeting {
+  background: #e0f2fe;
+  color: #0369a1;
+}

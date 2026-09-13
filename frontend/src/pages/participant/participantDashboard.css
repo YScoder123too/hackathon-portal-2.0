@@ -1,0 +1,185 @@
+.participant-content {
+  padding: 24px;
+}
+
+.welcome-heading {
+  font-size: 1.6rem;
+  font-weight: 700;
+  margin-bottom: 4px;
+}
+
+.welcome-sub {
+  color: #6b7280;
+  margin-bottom: 24px;
+}
+
+.stats-row {
+  margin-bottom: 32px;
+}
+
+.dashboard-card {
+  background: #fff;
+  border-radius: 12px;
+  padding: 20px;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.08);
+}
+
+.section-header {
+  margin-bottom: 16px;
+}
+
+.section-header h4 {
+  font-size: 1.1rem;
+  font-weight: 600;
+  margin: 0;
+}
+
+.hackathon-list {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.hackathon-card {
+  border: 1px solid #eee;
+  border-radius: 10px;
+  padding: 16px;
+}
+
+.hackathon-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-bottom: 10px;
+}
+
+.hackathon-top h5 {
+  margin: 0 0 4px 0;
+  font-weight: 600;
+}
+
+.hackathon-top p {
+  margin: 0;
+  color: #6b7280;
+  font-size: 0.9rem;
+}
+
+.status-badge {
+  padding: 4px 12px;
+  border-radius: 20px;
+  font-size: 0.75rem;
+  font-weight: 600;
+  white-space: nowrap;
+}
+
+.status-progress {
+  background: #fef3c7;
+  color: #b45309;
+}
+
+.status-upcoming {
+  background: #dbeafe;
+  color: #1d4ed8;
+}
+
+.status-completed {
+  background: #d1fae5;
+  color: #047857;
+}
+
+.hackathon-meta {
+  display: flex;
+  gap: 20px;
+  font-size: 0.85rem;
+  color: #6b7280;
+  margin-bottom: 10px;
+  flex-wrap: wrap;
+}
+
+.progress-bar-wrapper {
+  background: #f3f4f6;
+  border-radius: 20px;
+  height: 8px;
+  overflow: hidden;
+}
+
+.progress-bar-fill {
+  background: #00b4a2;
+  height: 100%;
+  border-radius: 20px;
+}
+
+.status-banner {
+  background: #d1fae5;
+  color: #047857;
+  padding: 10px 16px;
+  border-radius: 8px;
+  margin-bottom: 16px;
+  font-size: 0.9rem;
+  font-weight: 600;
+}
+
+.hackathon-actions {
+  display: flex;
+  gap: 10px;
+  margin-top: 10px;
+}
+
+.hackathon-actions button,
+.team-form button {
+  background: #00b4a2;
+  color: #fff;
+  border: none;
+  padding: 8px 16px;
+  border-radius: 6px;
+  font-size: 0.85rem;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.hackathon-actions button:hover,
+.team-form button:hover {
+  background: #009686;
+}
+
+.team-form {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+  margin-top: 10px;
+  flex-wrap: wrap;
+}
+
+.team-form input,
+.team-form textarea {
+  border: 1px solid #ddd;
+  border-radius: 6px;
+  padding: 8px 12px;
+  font-size: 0.85rem;
+  flex: 1;
+  min-width: 160px;
+}
+
+.cancel-btn {
+  background: #f3f4f6 !important;
+  color: #374151 !important;
+}
+
+.cancel-btn:hover {
+  background: #e5e7eb !important;
+}
+
+.status-progress {
+  background: #fef3c7;
+  color: #b45309;
+}
+
+.status-upcoming {
+  background: #dbeafe;
+  color: #1d4ed8;
+}
+
+.status-completed {
+  background: #d1fae5;
+  color: #047857;
+}

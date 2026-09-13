@@ -1,0 +1,39 @@
+.dashboard-card {
+  background: rgba(255,255,255,0.85);
+  border: 1px solid rgba(255,255,255,0.5);
+  padding: 24px;
+  margin-top: 25px;
+  backdrop-filter: blur(10px);
+}
+
+.section-header {
+  margin-bottom: 20px;
+}
+
+.section-header h4 {
+  color: var(--primary-navy);
+  font-weight: 700;
+}
+
+/* ── Tablet ── */
+@media (max-width: 1024px) {
+  .dashboard-card {
+    padding: 18px;
+  }
+}
+
+/* ── Mobile ── */
+@media (max-width: 768px) {
+  .dashboard-card {
+    padding: 16px;
+    margin-top: 16px;
+  }
+
+  .section-header {
+    margin-bottom: 14px;
+  }
+
+  .section-header h4 {
+    font-size: 1rem;
+  }
+}

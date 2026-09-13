@@ -1,0 +1,18 @@
+:root {
+  --primary-navy: #152A57;
+  --primary-teal: #1AA59A;
+  --mint-surface: #DDF4EC;
+  --sky-blue: #2F7BFF;
+  --warm-cream: #FFF4CC;
+
+  --white: #FFFFFF;
+
+  --text-dark: #1F2937;
+  --text-muted: #6B7280;
+
+  --border-color: #E5E7EB;
+
+  --success: #10B981;
+  --warning: #F59E0B;
+  --danger: #EF4444;
+}

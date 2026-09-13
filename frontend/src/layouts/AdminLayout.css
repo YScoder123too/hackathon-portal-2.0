@@ -1,0 +1,38 @@
+.admin-layout {
+  display: flex;
+  min-height: 100vh;
+  overflow: hidden;
+}
+
+.admin-main {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  background: linear-gradient(135deg, #edf8f4 0%, #f8fbfb 60%, #fff7e8 100%);
+  position: relative;
+  min-width: 0; /* prevent flex overflow */
+}
+
+.admin-content {
+  flex: 1;
+  padding: 40px;
+  position: relative;
+}
+
+/* ── Tablet ── */
+@media (max-width: 1024px) {
+  .admin-content {
+    padding: 24px;
+  }
+}
+
+/* ── Mobile ── */
+@media (max-width: 768px) {
+  .admin-layout {
+    flex-direction: column;
+  }
+
+  .admin-content {
+    padding: 16px;
+  }
+}

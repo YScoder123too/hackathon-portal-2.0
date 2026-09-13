@@ -1,0 +1,273 @@
+.sidebar {
+  width: 240px;           /* ← was 300px, tighter on desktop */
+  min-height: 100vh;
+  background: linear-gradient(180deg, #10285d, #031c55);
+  color: white;
+  display: flex;
+  flex-direction: column;
+  flex-shrink: 0;
+  transition: transform 0.3s ease;
+}
+
+/* ── Close button (hidden on desktop & tablet) ── */
+.sidebar-close {
+  display: none;
+}
+
+/* ── Logo ── */
+.sidebar-logo {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 20px 20px;    /* ← was 36px, less top/bottom breathing room */
+}
+
+.logo-icon {
+  width: 40px;           /* ← was 56px */
+  height: 40px;
+  border-radius: 10px;
+  background: #0db5a6;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: bold;
+  font-size: 0.8rem;
+  flex-shrink: 0;
+}
+
+.sidebar-logo h2 {
+  margin: 0;
+  font-size: 1.3rem;     /* ← was 2rem */
+  line-height: 1.2;
+}
+
+.sidebar-logo span {
+  color: rgba(255, 255, 255, 0.7);
+  font-size: 0.72rem;
+}
+
+/* ── Nav ── */
+.sidebar-nav {
+  display: flex;
+  flex-direction: column;
+  margin-top: 8px;       /* ← was 20px */
+}
+
+.sidebar-link {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 11px 20px;    /* ← was 18px 28px — much less tall */
+  color: white;
+  text-decoration: none;
+  font-size: 0.875rem;
+  transition: 0.2s;
+  cursor: pointer;
+}
+
+.sidebar-link svg {
+  font-size: 0.95rem;
+  flex-shrink: 0;
+}
+
+.sidebar-link:hover {
+  background: rgba(255, 255, 255, 0.06);
+}
+
+.sidebar-link.active {
+  background: #11b7a8;
+  position: relative;
+}
+
+.sidebar-link.active::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  width: 4px;
+  height: 100%;
+  background: white;
+}
+
+/* ── Support card ── */
+.support-card {
+  margin: auto 16px 16px;
+  background: #eefcf9;
+  color: #13295c;
+  padding: 14px;
+  border-radius: 8px;
+}
+
+.bot-icon {
+  font-size: 2rem;       /* ← was 3rem */
+}
+
+.support-card h4 {
+  margin: 8px 0 4px;
+  font-size: 0.85rem;
+}
+
+.support-card p {
+  font-size: 0.75rem;
+  margin: 0 0 8px;
+  line-height: 1.4;
+}
+
+.support-card button {
+  border: none;
+  background: transparent;
+  color: #0ca99d;
+  font-weight: 600;
+  font-size: 0.78rem;
+  cursor: pointer;
+  padding: 0;
+}
+
+/* ── Overlay (rendered in AdminLayout) ── */
+.sidebar-overlay {
+  display: none;
+}
+
+/* ══════════════════════════════
+   Tablet  (≤ 1024px)
+   Sidebar narrows to icon rail
+══════════════════════════════ */
+@media (max-width: 1024px) {
+  .sidebar {
+    width: 64px;
+  }
+
+  .sidebar-logo h2,
+  .sidebar-logo span,
+  .sidebar-link span,
+  .support-card {
+    display: none;
+  }
+
+  .sidebar-logo {
+    justify-content: center;
+    padding: 18px 0;
+  }
+
+  .logo-icon {
+    width: 36px;
+    height: 36px;
+    font-size: 0.7rem;
+  }
+
+  .sidebar-link {
+    justify-content: center;
+    padding: 13px 0;
+    font-size: 1rem;
+  }
+
+  .sidebar-link svg {
+    font-size: 1rem;
+  }
+
+  .sidebar-link.active::before {
+    width: 3px;
+  }
+}
+
+/* ══════════════════════════════
+   Mobile  (≤ 768px)
+   Sidebar slides in as drawer
+══════════════════════════════ */
+@media (max-width: 768px) {
+  .sidebar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 260px;
+    height: 100vh;
+    z-index: 1000;
+    transform: translateX(-100%);
+    overflow-y: auto;
+  }
+
+  .sidebar--open {
+    transform: translateX(0);
+  }
+
+  /* Restore hidden elements inside the drawer */
+  .sidebar-logo h2,
+  .sidebar-logo span,
+  .sidebar-link span,
+  .support-card {
+    display: block;
+  }
+
+  .sidebar-logo {
+    justify-content: flex-start;
+    padding: 16px 16px;
+    padding-top: 56px;
+  }
+
+  .sidebar-logo h2 {
+    font-size: 1.2rem;
+  }
+
+  .logo-icon {
+    width: 36px;
+    height: 36px;
+  }
+
+  .sidebar-link {
+    justify-content: flex-start;
+    padding: 12px 20px;
+    font-size: 0.875rem;
+    gap: 12px;
+  }
+
+  /* Close button */
+  .sidebar-close {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    top: 14px;
+    right: 14px;
+    background: rgba(255, 255, 255, 0.1);
+    border: none;
+    color: white;
+    width: 32px;
+    height: 32px;
+    border-radius: 6px;
+    font-size: 0.9rem;
+    cursor: pointer;
+    z-index: 10;
+  }
+
+  .sidebar-close:hover {
+    background: rgba(255, 255, 255, 0.2);
+  }
+
+  /* Overlay */
+  .sidebar-overlay {
+    display: block;
+    position: fixed;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.45);
+    z-index: 999;
+  }
+}
+
+.sidebar-link--disabled {
+  opacity: 0.45;
+  cursor: not-allowed;
+  position: relative;
+}
+
+.sidebar-link--disabled:hover {
+  background: none !important;
+}
+
+.soon-badge {
+  margin-left: auto;
+  font-size: 0.6rem;
+  background: rgba(255, 255, 255, 0.15);
+  padding: 2px 6px;
+  border-radius: 10px;
+  text-transform: uppercase;
+  font-weight: 700;
+}
