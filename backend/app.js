@@ -13,10 +13,15 @@ const app = express();
 // Security Headers
 app.use(helmet());
 
-// Enable CORS
+// Enable CORS — allows both local dev and the deployed frontend
+const allowedOrigins = [
+  "http://localhost:5173",
+  process.env.FRONTEND_URL,
+].filter(Boolean);
+
 app.use(
   cors({
-    origin: "http://localhost:5173", // React Vite
+    origin: allowedOrigins,
     credentials: true,
   })
 );

@@ -1,6 +1,15 @@
 import { registerUser, loginUser, getCurrentUser } from "../services/auth.service.js";
 import User from "../models/User.js";
 import ApiResponse from "../utils/ApiResponse.js";
+
+const isProd = process.env.NODE_ENV === "production";
+const cookieOptions = {
+  httpOnly: true,
+  secure: isProd,
+  sameSite: isProd ? "none" : "lax",
+  maxAge: 7 * 24 * 60 * 60 * 1000,
+};
+
 /**
  * Register User
  * POST /api/auth/signup
@@ -20,12 +29,7 @@ export const login = async (req, res, next) => {
   try {
     const { token, user } = await loginUser(req.body);
 
-    res.cookie("token", token, {
-      httpOnly: true,
-      secure: process.env.NODE_ENV === "production",
-      sameSite: "lax",
-      maxAge: 7 * 24 * 60 * 60 * 1000,
-    });
+    res.cookie("token", token, cookieOptions);
 
     return res
   .status(200)
@@ -48,8 +52,8 @@ export const me = async (req, res, next) => {
 export const logout = (req, res) => {
   res.clearCookie("token", {
     httpOnly: true,
-    secure: process.env.NODE_ENV === "production",
-    sameSite: "lax",
+    secure: isProd,
+    sameSite: isProd ? "none" : "lax",
   });
 
   return res
