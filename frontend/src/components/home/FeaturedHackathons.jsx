@@ -4,7 +4,7 @@ import codeFutureImg from "../../assets/images/codefuture.jpg";
 import innovateImg from "../../assets/images/innovate.jpg";
 import buildImg from "../../assets/images/build.jpg";
 import aiImg from "../../assets/images/ai.jpg";
-import "./featuredHackathons.css";
+import "./FeaturedHackathons.css";
 
 const hackathonsData = [
   {
