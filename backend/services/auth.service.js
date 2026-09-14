@@ -44,7 +44,7 @@ export const loginUser = async ({ email, password }) => {
   const isMatch = await user.comparePassword(password);
 
   if (!isMatch) {
-    throw new Error("Invalid email or password.");
+    throw new ApiError("Invalid email or password.");
   }
 
   // Judge approval check
